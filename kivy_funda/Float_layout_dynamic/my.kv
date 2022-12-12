@@ -1,0 +1,17 @@
+<Button>
+    font_size:40
+    color:0.3,0.4,0.7,1
+    size_hint:0.3, 0.3 #30% width, 50% height, without size the button will cover entre container
+
+<FloatLayout>
+    Button:
+        text: "Hello Kivy"
+        #pos_hint: {"x","y","top","botom","left","right"}
+        pos_hint: {"x":0.5, "top":1} #in kivy 0,0 cordinate means bottom left, x:0.5 = go right 50% of x
+
+    Button:
+        id:btn
+        text: "HI" if btn.state=="normal" else "Clicked"
+        background_color: 0.3,0.4,0.5,1
+
+
