@@ -1,0 +1,34 @@
+<MyGrid>:
+
+
+    textinput:text_id
+    display:display_id
+
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text: "Text Input: "                
+            TextInput:
+                id:text_id
+                multiline:True
+
+        Label:
+            #text: "Display: "                
+        TextInput:
+            id:display_id
+            multiline:False
+            
+        Button:
+            text:"Submit"
+            color:0.3,0.9,0.5,1
+            on_press: root.btn_pressed()
+
+        Button:
+            text:"Clear"
+            color:0.9,0.4,0.5,1
+            on_press: root.clear_text()
